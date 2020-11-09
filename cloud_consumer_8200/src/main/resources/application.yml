@@ -1,0 +1,14 @@
+server:
+  port: 8200
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka
+spring:
+  application:
+    name: cloud-consumer
+feign:
+  hystrix:
+    enabled: true

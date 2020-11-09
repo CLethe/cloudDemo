@@ -1,0 +1,3 @@
+# springcloud netflix自写demo
+有些没注释，且未搭建集群，zuul没有回退方法
+可查看另一个springcloud的demo

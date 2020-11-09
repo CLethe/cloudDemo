@@ -1,0 +1,16 @@
+server:
+  port: 8400
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/lethe_cc/springcloud-config.git
+  application:
+    name: cloud-config-server
+# 这里是将其注册到eureka，使后面的需要配置的就从eureka中拿
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka

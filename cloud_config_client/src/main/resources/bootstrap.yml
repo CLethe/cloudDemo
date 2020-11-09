@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    config:
+#      uri: http://localhost:8400
+      name: application
+      profile: dev # 这里是选择dev版本的文件
+      discovery:
+        enabled: true # 开启通过服务名来访问config-server
+        service-id: cloud-config-server # 设置config的服务名
+server:
+  port: 8500
+
+# 这是将其注册到eureka中，让其去eureka中取数据
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka
